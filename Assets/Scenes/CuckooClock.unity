@@ -427,6 +427,7 @@ MonoBehaviour:
   rotSpeed: 12
   clockSound: {fileID: 0}
   clockClip: {fileID: 0}
+  time: 0
 --- !u!212 &459141781
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -622,10 +623,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65fa55fab31b85a4fb7bca019b90be6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bird: {fileID: 0}
+  bird: {fileID: 297575516}
   rotSpeed: 3
   clockSound: {fileID: 1246256939}
   clockClip: {fileID: 8300000, guid: 4fd926af1e936314c9de00ec09b1bb7e, type: 3}
+  time: 0
 --- !u!212 &1201552343
 SpriteRenderer:
   m_ObjectHideFlags: 0
