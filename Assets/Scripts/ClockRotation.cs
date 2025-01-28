@@ -1,14 +1,17 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.U2D;
 
 public class ClockRotation : MonoBehaviour
 {
+    public GameObject bird;
     public float rotSpeed;
     public AudioSource clockSound;
     public AudioClip clockClip;
+    public float time;
 
    //public bool startSound;
 
@@ -30,7 +33,12 @@ public class ClockRotation : MonoBehaviour
             if (!clockSound.isPlaying)
             {
                 clockSound.PlayOneShot(clockClip);
+                bird.SetActive(true);
             }
+        }
+        else
+        {
+                bird.SetActive(false);
         }
     }
 }
