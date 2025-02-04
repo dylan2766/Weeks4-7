@@ -9,7 +9,7 @@ public class CollideTurnOn : MonoBehaviour
     public GameObject characterPos;
     public GameObject birb;
     public Collider2D birbCol;
-    public Collider2D characterCol;
+    public Rigidbody2D characterCol;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,9 +23,13 @@ public class CollideTurnOn : MonoBehaviour
 
         Vector2 characterCollide = characterPos.transform.position;
 
-        if (birbCol.isTrigger)
+        if (characterCol.IsTouching(birbCol))
         {
             collision.SetActive(true);
+        }
+        else
+        {
+            collision.SetActive(false);
         }
     }
 }
