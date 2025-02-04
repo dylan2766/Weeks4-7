@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Animations;
 
-public class RandomColour : MonoBehaviour
+public class CharacterMover : MonoBehaviour
 {
-    public GameObject sprite;
+    public float speed;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +15,6 @@ public class RandomColour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       // sprite.c
+        transform.Translate(Input.GetAxis("Horizontal") * speed * Time.deltaTime, Input.GetAxis("Vertical") * speed * Time.deltaTime, 0);
     }
 }
