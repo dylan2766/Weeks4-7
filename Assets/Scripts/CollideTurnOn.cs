@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CollideTurnOn : MonoBehaviour
 {
+    //variables
     public GameObject collision;
     public GameObject characterPos;
     public GameObject birb;
