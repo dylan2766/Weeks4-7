@@ -219,33 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e2c2ed69cd99540bac96f73582004c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sliderSpeed: {fileID: 1737178902}
-  conveyorCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 1
-      value: 1
-      inSlope: 1
-      outSlope: 1
-      tangentMode: 34
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  start: {fileID: 436103245}
-  end: {fileID: 2057454528}
+  speed: 0
+  sliderSpeed: {fileID: 1737178904}
 --- !u!1 &86659732
 GameObject:
   m_ObjectHideFlags: 0
@@ -805,6 +780,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1737178903}
   - component: {fileID: 1737178904}
+  - component: {fileID: 1737178905}
   m_Layer: 5
   m_Name: Speed Slider
   m_TagString: Untagged
@@ -885,6 +861,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1737178905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737178902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2aa5ff307f9df504f8732ef6280bd3b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  slider: {fileID: 1737178904}
 --- !u!1 &1952977419
 GameObject:
   m_ObjectHideFlags: 0

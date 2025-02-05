@@ -5,33 +5,37 @@ using UnityEngine.UI;
 
 public class ConveyorBelt : MonoBehaviour
 {
-    public AnimationCurve conveyorCurve;
-    public Transform start;
-    public Transform end;
+    //public AnimationCurve conveyorCurve;
+    //public Transform start;
+    //public Transform end;
 
-    Slider slider;
+    public float speed;
+    public Slider sliderSpeed;
+
+    //Slider slider;
     // Start is called before the first frame update
     void Start()
     {
-        
+        sliderSpeed = GetComponent<Slider>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        slider = GetComponent<Slider>();
 
-        float speed = slider.value * Time.deltaTime;
-        speed = 2 * Time.deltaTime;
+        speed = sliderSpeed.value;
 
         Vector2 pos = transform.position;
-        pos.x += 2 * Time.deltaTime;
+        pos.x += speed * Time.deltaTime;
         transform.position = pos;
 
-        if(pos.x >= end.position.x)
-        {
-            pos = start.position;
-        }
+
+        //if(pos.x >= end.position.x)
+        //{
+        //    pos = start.position;
+        //}
+
 
         //transform.position = Vector2.Lerp(start.position, end.position, conveyorCurve.Evaluate(speed));
     }
