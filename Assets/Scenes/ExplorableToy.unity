@@ -219,6 +219,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21e2c2ed69cd99540bac96f73582004c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  start: {fileID: 436103245}
+  end: {fileID: 2057454528}
   speed: 0
   sliderSpeed: {fileID: 1737178904}
 --- !u!1 &86659732
