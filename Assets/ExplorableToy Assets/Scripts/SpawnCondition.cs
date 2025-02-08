@@ -8,7 +8,8 @@ public class SpawnCondition : MonoBehaviour
     //Variables
     public int spawnOn;
     public Button power;
-    public Image color;
+    public Sprite[] powerSprites;
+    Sprite sprite;
 
     // Start is called before the first frame update
     void Start()
@@ -21,12 +22,21 @@ public class SpawnCondition : MonoBehaviour
     {
         if(spawnOn == -1)
         {
-
+            sprite = powerSprites[0];
+            gameObject.GetComponent<Image>().sprite = sprite;
         }
 
         if (spawnOn == 1)
         {
-
+            sprite = powerSprites[1];
+            gameObject.GetComponent<Image>().sprite = sprite;
         }
     }
+
+    //button to turn on and off
+    public void powerSwitch()
+    {
+        spawnOn = spawnOn * -1;
+    }
+
 }
