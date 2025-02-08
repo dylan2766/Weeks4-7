@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8438182920458883004}
   - component: {fileID: -4648083615643236356}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Select 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.96777844, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,9 +97,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62acd21d4f524a74a811eef5e7b70de3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  start: {fileID: 0}
-  end: {fileID: 0}
+  start: {fileID: 8653845280536129789, guid: 6b246642e3f741b4abad1d5a89039812, type: 3}
+  end: {fileID: 973510297324109180, guid: d8fb50f135665d34db73f6db8262e224, type: 3}
   xEnd: 0
   xStart: 0
   speed: 0
-  sliderSpeed: {fileID: 0}
+  sliderSpeed: {fileID: 4426975544176279632, guid: 87c02ed0178a011458c62b726ae13d77, type: 3}
