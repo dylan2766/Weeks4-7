@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8438182920458883004}
   - component: {fileID: -4648083615643236356}
   m_Layer: 0
-  m_Name: Select 1
+  m_Name: Food
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +28,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 46b104efa1cb733429eb656f5f1b7ff9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -103,3 +103,11 @@ MonoBehaviour:
   xStart: 0
   speed: 0
   sliderSpeed: {fileID: 4426975544176279632, guid: 87c02ed0178a011458c62b726ae13d77, type: 3}
+  selection: {fileID: 4207140897362342771, guid: 9831812547413ec4e96e76be2958d241, type: 3}
+  spriteRenderer: {fileID: 8438182920458883004}
+  sprites:
+  - {fileID: 21300000, guid: 46b104efa1cb733429eb656f5f1b7ff9, type: 3}
+  - {fileID: 21300000, guid: 9afd5303e05f45f41ab2ede3fd9ab085, type: 3}
+  - {fileID: 21300000, guid: 473a22bc0d81d9e479978b92d44e6d29, type: 3}
+  - {fileID: 21300000, guid: abb9cea48d55a8a4989ab2eecad82765, type: 3}
+  spawned: {fileID: 0}

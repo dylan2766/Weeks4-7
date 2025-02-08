@@ -15,12 +15,20 @@ public class MoveFood : MonoBehaviour
     public float speed;
     public Slider sliderSpeed;
 
+    public SelectionValue selection;
+
+    public SpriteRenderer spriteRenderer;
+    public Sprite[] sprites;
+    public Spawner spawned;
+
     Transform xPos;
     // Start is called before the first frame update
     void Start()
     {
         //References tranforms
         xPos = GetComponent<Transform>();
+
+        spriteRenderer.sprite = sprites[selection.selectionValue];
     }
 
     // Update is called once per frame
