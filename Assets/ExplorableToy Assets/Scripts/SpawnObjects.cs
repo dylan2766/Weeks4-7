@@ -6,29 +6,25 @@ public class SpawnObjects : MonoBehaviour
 {
     public GameObject prefab;
 
-    public List<GameObject> foodSpawned;
-
     public SpawnCondition on;
 
     public float t;
     // Start is called before the first frame update
     void Start()
     {
-        foodSpawned = new List<GameObject>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (on.spawnOn == 1 && t !< 4.99)
+        if (Mathf.Round(t) == 5 && on.spawnOn == 1)
         {
+            t = 0;
+
             GameObject spawnFood = Instantiate(prefab, transform.position, Quaternion.identity);
 
-            foodSpawned.Add(spawnFood);
-
-            MoveFood foodScript = spawnFood.GetComponent<MoveFood>();
-
-            //foodScript.spawned = this;
+            MoveFood foodScript = GetComponent<MoveFood>();
 
             if (transform.position.x >= foodScript.xEnd)
             {
@@ -36,9 +32,11 @@ public class SpawnObjects : MonoBehaviour
             }
         }
 
-        t += Time.deltaTime;
-
-        if (t >= 5)
+        if (on.spawnOn == 1)
+        {
+            t += Time.deltaTime;
+        }
+        else
         {
             t = 0;
         }

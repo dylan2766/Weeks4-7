@@ -19,7 +19,6 @@ public class MoveFood : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
-    public Spawner spawned;
 
     Transform xPos;
     // Start is called before the first frame update
