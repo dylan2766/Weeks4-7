@@ -8,6 +8,8 @@ public class GearRotation : MonoBehaviour
     //Variables
     public float rotSpeed;
     public Slider sliderSpeed;
+
+    public SpawnCondition on;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,8 +22,11 @@ public class GearRotation : MonoBehaviour
         //Gets value of slider to set as speed
         rotSpeed = sliderSpeed.value;
 
-        Vector3 pos = transform.rotation.eulerAngles;
-        pos.z += (-rotSpeed * 15) * Time.deltaTime;
-        transform.eulerAngles = pos;
+        if (on.spawnOn == 1)
+        {
+            Vector3 pos = transform.rotation.eulerAngles;
+            pos.z += (-rotSpeed * 15) * Time.deltaTime;
+            transform.eulerAngles = pos;
+        }
     }
 }
