@@ -18,7 +18,7 @@ public class SpawnObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Round(t) == 5 && on.spawnOn == 1)
+        if (Mathf.Round(t) == 3 && on.spawnOn == 1)
         {
             t = 0;
 
