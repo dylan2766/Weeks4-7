@@ -1284,6 +1284,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665883615}
   m_CullTransparentMesh: 1
+--- !u!1 &681538809
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 681538810}
+  - component: {fileID: 681538811}
+  m_Layer: 0
+  m_Name: StoredValues
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &681538810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681538809}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1437887903}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &681538811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681538809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30a53d834723bb5499904061246ca7b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 4962841288355549229}
+  speed: 0
 --- !u!1 &725899692
 GameObject:
   m_ObjectHideFlags: 0
@@ -2435,6 +2481,7 @@ Transform:
   - {fileID: 992240841327517700}
   - {fileID: 810858477}
   - {fileID: 468570043}
+  - {fileID: 681538810}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1546980152
@@ -3579,7 +3626,6 @@ MonoBehaviour:
   food: {fileID: 7235649578594461960, guid: 9e00cb142a6d032429ec41226ec401ad, type: 3}
   spawnedFood: []
   spawnFood: {fileID: 7235649578594461960, guid: 9e00cb142a6d032429ec41226ec401ad, type: 3}
-  foodScript: {fileID: 0}
   on: {fileID: 220054961}
   t: 0
 --- !u!114 &4899873367956465449
