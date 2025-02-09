@@ -16,6 +16,8 @@ public class SpawnObjects : MonoBehaviour
 
     public Slider foodSlider;
 
+    public SelectionValue foodSelection;
+
     public SpawnCondition on;
 
     public float t;
@@ -30,6 +32,11 @@ public class SpawnObjects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        //Changes speed of prefab to match conveyor belt
+        MoveFood foodScript2 = spawnFood.GetComponent<MoveFood>();
+        foodScript2.speed = foodSlider.value;
+
         //if conveyor belt turned on and speed is greater than 0
         if (on.spawnOn == 1 && foodSlider.value > 0)
         {
@@ -49,8 +56,8 @@ public class SpawnObjects : MonoBehaviour
 
                 MoveFood foodScript = spawnFood.GetComponent<MoveFood>();
 
-                //Changes speed of prefab to match conveyor belt
-                foodScript.speed = foodSlider.value;
+                //Change loaded sprite
+                foodScript.spriteRenderer.sprite = foodScript.sprites[foodSelection.selection - 1];
 
                 foodScript.foodSpawner = this;
             }
@@ -60,6 +67,6 @@ public class SpawnObjects : MonoBehaviour
             t = 0;
         }
         //Destorys the prefab after a certain amount of time (the lower the speed the more time to despawn)
-        Destroy(spawnFood, 20 - (foodSlider.value * 1.25f));
+        Destroy(spawnFood, 25 - (foodSlider.value * 1.25f));
     }
 }
