@@ -10,13 +10,18 @@ public class SpawnObjects : MonoBehaviour
 
     public GameObject spawnFood;
 
+    public Slider foodSlider;
+
     public SpawnCondition on;
 
     public float t;
+
+    public float foodSpeed;
     // Start is called before the first frame update
     void Start()
     {
         spawnedFood = new List<GameObject>();
+        foodSpeed = foodSlider.value;
     }
 
     // Update is called once per frame
@@ -32,7 +37,8 @@ public class SpawnObjects : MonoBehaviour
 
             MoveFood foodScript = spawnFood.GetComponent<MoveFood>();
 
-            foodScript.speed = 2;
+            foodSpeed = foodSlider.value;
+            foodScript.speed = foodSpeed;
 
             foodScript.selection = spawnFood.GetComponent<SelectionValue>().selection;
             spawnFood.GetComponent<MoveFood>().selection = foodScript.selection;
