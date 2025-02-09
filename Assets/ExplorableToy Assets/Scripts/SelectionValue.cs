@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SelectionValue : MonoBehaviour
 {
     //Variables
-    public int selectionValue;
+    public int selection;
 
     public Button left;
     public Button right;
@@ -16,22 +16,22 @@ public class SelectionValue : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        selectionValue = 1;
+        selection = 1;
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        sprite = foodSprites[selectionValue -1];
+        sprite = foodSprites[selection -1];
         gameObject.GetComponent<Image>().sprite = sprite;
 
         //Sets inactive if button is at min or max value
-        if (selectionValue <= 1)
+        if (selection <= 1)
         {
             left.enabled = false;
             left.interactable = false;
-            selectionValue = 1;
+            selection = 1;
         }
         else
         {
@@ -39,11 +39,11 @@ public class SelectionValue : MonoBehaviour
             left.interactable = true;
         }
 
-        if (selectionValue >= 4)
+        if (selection >= 4)
         {
             right.enabled = false;
             right.interactable = false;
-            selectionValue = 4;
+            selection = 4;
         }
         else
         {
@@ -55,12 +55,12 @@ public class SelectionValue : MonoBehaviour
     //Subtract 1 if press left button
     public void pressLeft()
     {
-        selectionValue = selectionValue - 1;
+        selection = selection - 1;
     }
 
     //Add 1 if press right button
     public void pressRight()
     {
-        selectionValue = selectionValue + 1;
+        selection = selection + 1;
     }
 }

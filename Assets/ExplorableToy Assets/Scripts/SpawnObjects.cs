@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpawnObjects : MonoBehaviour
 {
     public GameObject food;
     public List<GameObject> spawnedFood;
+
+    public GameObject spawnFood;
+    public MoveFood foodScript;
 
     public SpawnCondition on;
 
@@ -23,16 +27,16 @@ public class SpawnObjects : MonoBehaviour
         {
             t = 0;
 
-            GameObject spawnFood = Instantiate(food, transform.position, Quaternion.identity);
+            spawnFood = Instantiate(food, transform.position, Quaternion.identity);
 
             spawnedFood.Add(spawnFood);
 
-            MoveFood foodScript = spawnFood.GetComponent<MoveFood>();
-            foodScript.sliderSpeed = spawnFood.GetComponent<SliderSpeed>().slider;
-            foodScript.speed = spawnFood.GetComponent<SliderSpeed>().speed;
-            foodScript.selection = spawnFood.GetComponent<SelectionValue>();
-            //foodScript.foodSpawner = this;
+            foodScript = spawnFood.GetComponent<MoveFood>();
 
+            foodScript.selection = spawnFood.GetComponent<SelectionValue>().selection;
+            spawnFood.GetComponent<MoveFood>().selection = foodScript.selection;
+
+            foodScript.foodSpawner = this;
 
             if (transform.position.x >= foodScript.xEnd)
             {
