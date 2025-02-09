@@ -3578,6 +3578,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   food: {fileID: 7235649578594461960, guid: 9e00cb142a6d032429ec41226ec401ad, type: 3}
   spawnedFood: []
+  spawnFood: {fileID: 7235649578594461960, guid: 9e00cb142a6d032429ec41226ec401ad, type: 3}
+  foodScript: {fileID: 0}
   on: {fileID: 220054961}
   t: 0
 --- !u!114 &4899873367956465449

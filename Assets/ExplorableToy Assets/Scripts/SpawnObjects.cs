@@ -9,7 +9,6 @@ public class SpawnObjects : MonoBehaviour
     public List<GameObject> spawnedFood;
 
     public GameObject spawnFood;
-    public MoveFood foodScript;
 
     public SpawnCondition on;
 
@@ -31,7 +30,9 @@ public class SpawnObjects : MonoBehaviour
 
             spawnedFood.Add(spawnFood);
 
-            foodScript = spawnFood.GetComponent<MoveFood>();
+            MoveFood foodScript = spawnFood.GetComponent<MoveFood>();
+
+            foodScript.speed = 2;
 
             foodScript.selection = spawnFood.GetComponent<SelectionValue>().selection;
             spawnFood.GetComponent<MoveFood>().selection = foodScript.selection;
