@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SpawnObjects : MonoBehaviour
 {
-    public GameObject prefab;
+    public GameObject food;
+    public List<GameObject> spawnedFood;
 
     public SpawnCondition on;
 
@@ -12,7 +13,7 @@ public class SpawnObjects : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        spawnedFood = new List<GameObject>();
     }
 
     // Update is called once per frame
@@ -22,9 +23,16 @@ public class SpawnObjects : MonoBehaviour
         {
             t = 0;
 
-            GameObject spawnFood = Instantiate(prefab, transform.position, Quaternion.identity);
+            GameObject spawnFood = Instantiate(food, transform.position, Quaternion.identity);
 
-            MoveFood foodScript = GetComponent<MoveFood>();
+            spawnedFood.Add(spawnFood);
+
+            MoveFood foodScript = spawnFood.GetComponent<MoveFood>();
+            foodScript.sliderSpeed = spawnFood.GetComponent<SliderSpeed>().slider;
+            foodScript.speed = spawnFood.GetComponent<SliderSpeed>().speed;
+            foodScript.selection = spawnFood.GetComponent<SelectionValue>();
+            //foodScript.foodSpawner = this;
+
 
             if (transform.position.x >= foodScript.xEnd)
             {

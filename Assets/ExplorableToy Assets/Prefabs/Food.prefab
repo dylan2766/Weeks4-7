@@ -102,11 +102,12 @@ MonoBehaviour:
   xEnd: 0
   xStart: 0
   speed: 0
-  sliderSpeed: {fileID: 4426975544176279632, guid: 87c02ed0178a011458c62b726ae13d77, type: 3}
-  selection: {fileID: 4207140897362342771, guid: 9831812547413ec4e96e76be2958d241, type: 3}
+  sliderSpeed: {fileID: 0}
+  selection: {fileID: 0}
   spriteRenderer: {fileID: 8438182920458883004}
   sprites:
   - {fileID: 21300000, guid: 46b104efa1cb733429eb656f5f1b7ff9, type: 3}
   - {fileID: 21300000, guid: 9afd5303e05f45f41ab2ede3fd9ab085, type: 3}
   - {fileID: 21300000, guid: 473a22bc0d81d9e479978b92d44e6d29, type: 3}
   - {fileID: 21300000, guid: abb9cea48d55a8a4989ab2eecad82765, type: 3}
+  foodSpawner: {fileID: 0}

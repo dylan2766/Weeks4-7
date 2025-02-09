@@ -20,6 +20,8 @@ public class MoveFood : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Sprite[] sprites;
 
+    public Spawner foodSpawner;
+
     Transform xPos;
     // Start is called before the first frame update
     void Start()
@@ -28,20 +30,21 @@ public class MoveFood : MonoBehaviour
         xPos = GetComponent<Transform>();
 
         spriteRenderer.sprite = sprites[selection.selectionValue];
+
+        speed = sliderSpeed.value;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Gets value of slider to set as speed
+        //slider speed value
         speed = sliderSpeed.value;
 
-        //Moves conveyor belt
+        //Moves food
         xPos.transform.position = transform.position;
 
         Vector2 pos = transform.position;
         pos.x += speed * Time.deltaTime;
-        transform.position = pos;
 
         //Setting start and end positions.
         xEnd = end.position.x;
@@ -52,5 +55,6 @@ public class MoveFood : MonoBehaviour
         {
             xPos.transform.position = start.position;
         }
+        transform.position = pos;
     }
 }
