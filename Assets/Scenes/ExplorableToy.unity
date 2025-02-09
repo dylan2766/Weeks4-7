@@ -2576,7 +2576,7 @@ Transform:
   m_GameObject: {fileID: 1437887902}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4023,10 +4023,10 @@ MonoBehaviour:
   left: {fileID: 665883617}
   right: {fileID: 2056842290}
   foodSprites:
-  - {fileID: 21300000, guid: 46b104efa1cb733429eb656f5f1b7ff9, type: 3}
-  - {fileID: 21300000, guid: 9afd5303e05f45f41ab2ede3fd9ab085, type: 3}
-  - {fileID: 21300000, guid: 473a22bc0d81d9e479978b92d44e6d29, type: 3}
-  - {fileID: 21300000, guid: abb9cea48d55a8a4989ab2eecad82765, type: 3}
+  - {fileID: 21300000, guid: 813dba69905415147882458eccd9bb60, type: 3}
+  - {fileID: 21300000, guid: f2cb019067c02714e9e20fd7af1cabdc, type: 3}
+  - {fileID: 21300000, guid: bf682a81e6a2e7a4887e2cc26471292a, type: 3}
+  - {fileID: 21300000, guid: 81cbb5d26babaa4498d90ffad778c022, type: 3}
 --- !u!114 &6456476849322058747
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4119,7 +4119,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 46b104efa1cb733429eb656f5f1b7ff9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 813dba69905415147882458eccd9bb60, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1

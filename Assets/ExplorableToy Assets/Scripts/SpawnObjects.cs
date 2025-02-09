@@ -33,18 +33,20 @@ public class SpawnObjects : MonoBehaviour
     void Update()
     {
 
-        //Changes speed of prefab to match conveyor belt
-        MoveFood foodScript2 = spawnFood.GetComponent<MoveFood>();
-        foodScript2.speed = foodSlider.value;
+
 
         //if conveyor belt turned on and speed is greater than 0
         if (on.spawnOn == 1 && foodSlider.value > 0)
         {
+            //Changes speed of prefab to match conveyor belt
+            MoveFood foodScript2 = spawnFood.GetComponent<MoveFood>();
+            foodScript2.speed = foodSlider.value;
+
             //tracks time
             t += Time.deltaTime;
 
             //round to nearest int is equal to 3 reset timer and spawn instance of prefab
-            if (Mathf.Round(t) == 3)
+            if (Mathf.Round(t) == 4)
             {
                 t = 0;
 
