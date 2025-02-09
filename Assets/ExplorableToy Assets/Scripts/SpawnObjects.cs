@@ -9,6 +9,9 @@ public class SpawnObjects : MonoBehaviour
     public List<GameObject> spawnedFood;
 
     public GameObject spawnFood;
+    public MoveFood foodScript;
+
+    public GameObject end;
 
     public Slider foodSlider;
 
@@ -21,43 +24,36 @@ public class SpawnObjects : MonoBehaviour
     void Start()
     {
         spawnedFood = new List<GameObject>();
-        foodSpeed = foodSlider.value;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Mathf.Round(t) == 3 && on.spawnOn == 1)
-        {
-            t = 0;
-
-            spawnFood = Instantiate(food, transform.position, Quaternion.identity);
-
-            spawnedFood.Add(spawnFood);
-
-            MoveFood foodScript = spawnFood.GetComponent<MoveFood>();
-
-            foodSpeed = foodSlider.value;
-            foodScript.speed = foodSpeed;
-
-            foodScript.selection = spawnFood.GetComponent<SelectionValue>().selection;
-            spawnFood.GetComponent<MoveFood>().selection = foodScript.selection;
-
-            foodScript.foodSpawner = this;
-
-            if (transform.position.x >= foodScript.xEnd)
-            {
-                Destroy(spawnFood);
-            }
-        }
-
         if (on.spawnOn == 1)
         {
             t += Time.deltaTime;
+
+            if (Mathf.Round(t) == 3)
+            {
+                t = 0;
+
+                spawnFood = Instantiate(food, transform.position, Quaternion.identity);
+
+                spawnedFood.Add(spawnFood);
+
+                MoveFood foodScript = spawnFood.GetComponent<MoveFood>();
+
+                //Changes speed of prefab to match conveyor belt
+                foodScript.speed = foodSlider.value;
+
+                foodScript.foodSpawner = this;
+            }
         }
         else
         {
             t = 0;
         }
+        //Destorys the prefab after a certain amount of time (the lower the speed the more time to despawn)
+        Destroy(spawnFood, 20 - (foodSlider.value * 1.25f));
     }
 }

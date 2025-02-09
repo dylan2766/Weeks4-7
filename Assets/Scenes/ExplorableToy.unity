@@ -3067,6 +3067,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1945055835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4660370875575495278, guid: d8fb50f135665d34db73f6db8262e224, type: 3}
+  m_PrefabInstance: {fileID: 1384798718625722497}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1985339312
 GameObject:
   m_ObjectHideFlags: 0
@@ -3415,7 +3420,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 973510297324109180, guid: d8fb50f135665d34db73f6db8262e224, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 973510297324109180, guid: d8fb50f135665d34db73f6db8262e224, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3626,8 +3631,12 @@ MonoBehaviour:
   food: {fileID: 7235649578594461960, guid: 9e00cb142a6d032429ec41226ec401ad, type: 3}
   spawnedFood: []
   spawnFood: {fileID: 7235649578594461960, guid: 9e00cb142a6d032429ec41226ec401ad, type: 3}
+  foodScript: {fileID: 0}
+  end: {fileID: 1945055835}
+  foodSlider: {fileID: 4962841288355549229}
   on: {fileID: 220054961}
   t: 0
+  foodSpeed: 0
 --- !u!114 &4899873367956465449
 MonoBehaviour:
   m_ObjectHideFlags: 0

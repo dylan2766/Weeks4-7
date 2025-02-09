@@ -101,7 +101,6 @@ MonoBehaviour:
   xEnd: 0
   speed: 0
   selection: 0
-  sliderSpeed: {fileID: 0}
   spriteRenderer: {fileID: 7273478707881472468}
   sprites:
   - {fileID: 21300000, guid: 46b104efa1cb733429eb656f5f1b7ff9, type: 3}
