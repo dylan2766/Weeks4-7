@@ -23,6 +23,8 @@ public class SpawnObjects : MonoBehaviour
     public float t;
 
     public float foodSpeed;
+
+    public int powered;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,14 +35,23 @@ public class SpawnObjects : MonoBehaviour
     void Update()
     {
 
+        //Changes speed of prefab to match conveyor belt
+        MoveFood foodScript2 = spawnFood.GetComponent<MoveFood>();
 
+        if (on.spawnOn >= 1)
+        {
+            powered = 1;
+        }
+        else
+        {
+            powered = 0;
+        }
+
+        foodScript2.speed = foodSlider.value * powered;
 
         //if conveyor belt turned on and speed is greater than 0
         if (on.spawnOn == 1 && foodSlider.value > 0)
         {
-            //Changes speed of prefab to match conveyor belt
-            MoveFood foodScript2 = spawnFood.GetComponent<MoveFood>();
-            foodScript2.speed = foodSlider.value;
 
             //tracks time
             t += Time.deltaTime;
