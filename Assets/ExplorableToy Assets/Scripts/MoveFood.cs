@@ -36,6 +36,8 @@ public class MoveFood : MonoBehaviour
         transform.position = pos;
 
         //Destorys the prefab after a certain amount of time (the lower the speed the more time to despawn)
-        Destroy(gameObject, 25 - (speed * 1.25f));
+        Destroy(gameObject, 21);
+        //Removes items from list
+        foodSpawner.deleteItem(gameObject);
     }
 }

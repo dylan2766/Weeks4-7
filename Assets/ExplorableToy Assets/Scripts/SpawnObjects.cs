@@ -57,7 +57,7 @@ public class SpawnObjects : MonoBehaviour
             t += Time.deltaTime;
 
             //round to nearest int is equal to 3 reset timer and spawn instance of prefab
-            if (Mathf.Round(t) == 4)
+            if (Mathf.Round(t) == 11 - foodSlider.value % 30)
             {
                 t = 0;
 
@@ -79,5 +79,10 @@ public class SpawnObjects : MonoBehaviour
         {
             t = 0;
         }
+    }
+    //Removes object from list
+    public void deleteItem(GameObject t)
+    {
+        spawnedFood.Remove(t);
     }
 }
