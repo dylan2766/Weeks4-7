@@ -5,7 +5,12 @@ using UnityEngine;
 public class Target : MonoBehaviour
 {
     public float speed = 1;
-
+    public AnimationCurve curve;
+    public SpriteRenderer sr;
+    public Color col;
+    public float t;
+    bool isDead = false;
+    public TargetSpawner spawner;
 
     private void Start()
     {
@@ -40,5 +45,23 @@ public class Target : MonoBehaviour
         }
 
         transform.position = pos;
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            Vector2 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+           if (sr.bounds.Contains(mousePos))
+            {
+                sr.color = col;
+                isDead = true;
+                Destroy(gameObject, 1);
+                spawner.TargetHit(gameObject);
+            }
+        }
+
+        if(isDead == true)
+        {
+            t += Time.deltaTime;
+            transform.localScale = Vector3.one * curve.Evaluate(t);
+        }
     }
 }
