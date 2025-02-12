@@ -79,7 +79,5 @@ public class SpawnObjects : MonoBehaviour
         {
             t = 0;
         }
-        //Destorys the prefab after a certain amount of time (the lower the speed the more time to despawn)
-        Destroy(spawnFood, 25 - (foodSlider.value * 1.25f));
     }
 }
