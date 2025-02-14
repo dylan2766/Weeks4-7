@@ -31,6 +31,7 @@ public class MoveFood : MonoBehaviour
 
         //Moves food
         Vector2 pos = transform.position;
+
         pos.x += (speed * Time.deltaTime);
 
         transform.position = pos;
