@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class SliderSpeed : MonoBehaviour
 {
+    //Variables
     public float speed;
 
     public Slider slider;
@@ -18,6 +19,7 @@ public class SliderSpeed : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Set speed to the current slider value
         speed = slider.value;
     }
 }

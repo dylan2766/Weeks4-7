@@ -14,12 +14,14 @@ public class SpawnCondition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //set power button off on start
         spawnOn = -1;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //Switches sprite based on what the value of spawnOn is
         if(spawnOn == -1)
         {
             sprite = powerSprites[0];
